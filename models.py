@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Literal
 
 class Prompt(BaseModel):
     text: str
@@ -12,4 +12,20 @@ class Question(BaseModel):
 class Game(BaseModel):
     title: str = Field(description="The title of the trivia game. Should be exciting.")
     description: str = Field(description="A description of the game's topic.")
+    category: Literal[
+        "General Knowledge",
+        "Science & Nature",
+        "History",
+        "Geography",
+        "Entertainment",
+        "Sports",
+        "Art & Literature",
+        "Technology",
+        "Music",
+        "Movies",
+        "Television",
+        "Politics",
+        "Celebrities",
+        "Animals",
+    ] = Field(description="The category that the game fits into the best.")
     questions: List[Question] = Field(description="A list of 5 to 10 trivia questions.")

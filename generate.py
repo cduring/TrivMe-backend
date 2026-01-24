@@ -19,7 +19,7 @@ def generate_trivia_game(prompt_text: str) -> Game:
     "{prompt_text}"
 
     Ensure the questions are engaging and cover different aspects of the topic.
-    The game should have between 5 and 10 questions.
+    The game should have the specified number of questions. Do 5 if not specified.
     Each question must have 4 options and one correct answer.
     """
 
