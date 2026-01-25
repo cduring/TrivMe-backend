@@ -27,5 +27,6 @@ class Game(BaseModel):
         "Politics",
         "Celebrities",
         "Animals",
+        "Video Games"
     ] = Field(description="The category that the game fits into the best.")
     questions: List[Question] = Field(description="A list of 5 to 10 trivia questions.")
