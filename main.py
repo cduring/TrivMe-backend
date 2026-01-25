@@ -10,10 +10,7 @@ app = FastAPI(
     contact={"email": "chimdi.during@gmail.com"},
 )
 
-origins = [
-    "http://localhost:5173",
-    "https://localhost:5173"
-]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
