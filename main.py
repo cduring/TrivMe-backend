@@ -10,7 +10,7 @@ app = FastAPI(
     contact={"email": "chimdi.during@gmail.com"},
 )
 
-origins = ["*"]
+origins = ["https://triv-me.vercel.app/", "http://localhost:5173"]
 
 app.add_middleware(
     CORSMiddleware,
